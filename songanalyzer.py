@@ -44,7 +44,7 @@ class Solution:
         list = ""
         count = 0
         for y in alphabetical:
-            alpha[y] = 1
+            alpha[y] = 0
         for x in ly_list:
             if x[0] in alpha:
                 alpha[x[0]] += 1
