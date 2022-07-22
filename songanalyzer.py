@@ -51,7 +51,9 @@ class Solution:
                 word[x[-3:]] += 1
             else:
                 word[x[-3:]] = 1
-
+        
+        alpha = sorted(alpha.keys())
+        
         for i, j in alpha.items():
             if j > 1:
                 if len(list) != 0:
