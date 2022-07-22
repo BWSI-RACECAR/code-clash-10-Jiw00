@@ -38,10 +38,13 @@ class Solution:
         
         # TODO: Write code below to return a string with the solution to the prompt
         ly_list = lyric.split(" ")
+        alphabetical = "abcdefghijklmnopqrstuvwxyz"
         alpha = {}
         word = {}
         list = ""
         count = 0
+        for y in alphabetical:
+            alpha[y] = 1
         for x in ly_list:
             if x[0] in alpha:
                 alpha[x[0]] += 1
@@ -51,9 +54,7 @@ class Solution:
                 word[x[-3:]] += 1
             else:
                 word[x[-3:]] = 1
-        
-        alpha = sorted(alpha.keys())
-        
+                
         for i, j in alpha.items():
             if j > 1:
                 if len(list) != 0:
